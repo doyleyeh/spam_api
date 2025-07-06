@@ -172,3 +172,9 @@ Thumbs.db
 *.temp
 temp/
 tmp/ 
+
+# Testing files
+tests/
+
+# Deployment files
+deploy_lambda.sh

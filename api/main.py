@@ -1,4 +1,5 @@
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from transformers import DistilBertTokenizer, DistilBertForSequenceClassification
 import torch
@@ -16,6 +17,15 @@ app = FastAPI(
     title="Spam Classification API",
     description="A machine learning API for classifying text messages as spam or ham using DistilBERT",
     version="1.0.0"
+)
+
+# Add CORS middleware for Lambda deployment
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Configure this appropriately for production
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 # Pydantic models for request/response
