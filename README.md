@@ -26,10 +26,9 @@ spam_api/
 │   └── spam_classifier/      # Trained model directory (Hugging Face format)
 ├── notebooks/
 │   └── train_model.ipynb     # Analysis & training notebooks
-├── scripts/
-│   └── train_model.py        # Training logic script
-└── tests/
-    └── test_api.py           # Unit tests
+└── scripts/
+    └── train_model.py        # Training logic script
+
 ```
 
 ## Quick Start
